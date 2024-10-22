@@ -1,0 +1,51 @@
+(docker ubuntu)
+docker image ls
+docker image pull ubuntu:latest
+docker image ls
+//optional//
+docker run -it (img ID)/bin/bash
+   ps
+   ls
+
+To delete: docker rmi (name of img or ID)
+
+
+Docker python
+step1: using vs code create python-image folder and create 'Dockerfile' and app.py
+step2:in app.py insert
+                     print("Hello this is my first python app!")
+
+step3:in Dockerfile insert
+                      FROM python
+                      WORKDIR /app
+                      COPY . /app
+                      CMD ["python3","app.py"]
+step4:Open terminal in vscode :cd python image
+                              docker build -t myfirstpythonapp .
+                              docker run myfirstpythonapp
+step5:open docker and images section to see image
+
+
+
+
+docker java
+step1: using vs code create java-image folder and create 'Dockerfile' and sample.java
+step2:In Dockerfile insert
+                      FROM openjdk
+                      WORKDIR /app
+                      COPY . /app
+                      RUN javac sample.java
+                      CMD ["java","sample"]
+step3: Inserrt in sample.java
+                      public class sample{
+                        public static void main(String args[]){
+                           System.out.println("Hello world!");
+                        }
+                      }
+step4:open terminal cd java image
+                     javac sample.java
+                     java sample
+step5:continue in vs code: docker build -t myjavaapp .
+step 6:open cmd and type :-docker images
+                            docker run --name java1 myjavaap
+                       
