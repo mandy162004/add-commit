@@ -24,6 +24,12 @@ git checkout master
 git merge login
 
 
+version control
+git init #initalize  a local repository
+git status 
+git log  #view commit history
+git diff #view chnges not yet staged or commited
+
 
 
 push,
@@ -48,6 +54,11 @@ git config --global user.email"sam@gmail.com"
 
 
 fork
+git clone<forked-repo url>
+git remote add upstream<original repo-url>
+git fetch upstream
+
+
 Go to the Original Repository:
 
 The repository URL is https://github.com/open-source-org/awesome-project.
