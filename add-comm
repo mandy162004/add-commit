@@ -1,0 +1,89 @@
+Create a file in desktop then open bash from the file
+git init
+touch sam.txt(creating file)
+read.txt(creating file)
+git add .
+git status
+git add .
+git commit -m "first change"
+(modify file in system then git status u will see modify)
+git add read.txt
+git commit -m "second change"
+git rm --cached sam.txt(to remove file)
+git status (u will see in red so commit it again)
+
+
+
+merge
+git branch login
+git checkout login
+git status( make some changes in the file)
+git add . 
+git commit -m "update"
+git checkout master
+git merge login
+
+
+
+
+push,
+git remote add tutorial(link github repo ka)
+git push -u tutorial master
+
+
+pull(from randome repo)
+mkdir chess
+cd chess
+git init
+git pull //https(link of repo)
+
+
+
+
+
+
+user profile
+git config --global user.name"sam"
+git config --global user.email"sam@gmail.com"
+
+
+fork
+Go to the Original Repository:
+
+The repository URL is https://github.com/open-source-org/awesome-project.
+Fork the Repository:
+
+Navigate to the repository on GitHub.
+Click the "Fork" button in the top right corner. GitHub will now create a copy of this repository under your own account, e.g., https://github.com/your-username/awesome-project.
+Clone Your Fork Locally: To make changes locally, you first clone the forked repository:
+
+
+git clone https://github.com/your-username/awesome-project.git
+cd awesome-project
+Create a New Branch: You don't want to make changes directly to the main branch. Create a new branch to make your changes:
+
+
+git checkout -b fix-doc-typo
+Make Your Changes: Open the documentation file, fix the typo, and save your changes. After that, stage and commit the changes:
+
+
+git add README.md  # or the file you modified
+git commit -m "Fix typo in documentation"
+Push Changes to Your Fork: Push your changes from the local repository to your GitHub fork:
+
+
+git push origin fix-doc-typo
+Create a Pull Request:
+
+Go to your fork on GitHub, https://github.com/your-username/awesome-project.
+You will see an option to compare and create a pull request.
+Click "New Pull Request".
+Ensure that the base repository is open-source-org/awesome-project and the branch is main, and your fork is selected with the branch fix-doc-typo.
+Add a meaningful title and description for the pull request, like:
+makefile
+
+Title: Fix typo in documentation
+Description: Corrected a spelling mistake in the README file.
+Submit the pull request.
+Wait for Review: The maintainers of open-source-org/awesome-project will review your pull request. If it’s approved, they will merge your changes into the main project, and the typo fix will be available to everyone.
+
